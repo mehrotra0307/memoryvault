@@ -46,6 +46,7 @@ def add_item(
 def search(
     query_embedding: list[float],
     n_results: int = 5,
+    min_similarity: float = 65.0,
 ) -> list[dict]:
     col = _get_collection()
     count = col.count()
@@ -64,6 +65,8 @@ def search(
         # ChromaDB cosine distance: 0 = identical, 2 = opposite
         # Convert to similarity percentage: higher is better
         similarity = round((1 - distance / 2) * 100, 1)
+        if similarity < min_similarity:
+            continue
         items.append({
             "id": item_id,
             "similarity": similarity,
