@@ -1,8 +1,8 @@
 # MemoryVault 🧠
 
-> **Search your photos, PDFs, notes, and audio using plain English — no keywords needed.**
+> **Search your photos, PDFs, notes, and audio using plain English. No keywords needed.**
 >
-> Built with Google's **Gemini Embedding 2** — the world's first AI model that understands text, images, audio, PDFs, and video in one unified space.
+> Built with Google's **Gemini Embedding 2**, the world's first AI model that understands text, images, audio, PDFs, and video in one unified space.
 
 ---
 
@@ -10,9 +10,9 @@
 
 MemoryVault is a web application where you can:
 
-1. **Upload any file** — a holiday photo, a PDF article, a text note, or an audio clip
-2. **Search by typing anything** — `"warm beach vacation"` or `"snowy mountain trek"`
-3. **Get results from all file types** — a photo, a PDF, and a text note about the same topic all appear together
+1. **Upload any file**: a holiday photo, a PDF article, a text note, or an audio clip
+2. **Search by typing anything**: `"warm beach vacation"` or `"snowy mountain trek"`
+3. **Get results from all file types**: a photo, a PDF, and a text note about the same topic all appear together
 
 The magic: you never tag your files. You never write keywords. The AI understands the *meaning* of your content and matches it to the *meaning* of your search query.
 
@@ -20,7 +20,7 @@ The magic: you never tag your files. You never write keywords. The AI understand
 
 ## What is Gemini Embedding 2?
 
-Think of it like this: imagine if every photo, PDF, song, and sentence you ever had could be translated into the same secret language — a list of 3,072 numbers that captures its meaning.
+Think of it like this: imagine if every photo, PDF, song, and sentence you ever had could be translated into the same secret language: a list of 3,072 numbers that captures its meaning.
 
 - A **beach photo** → becomes numbers like `[-0.026, -0.009, 0.044 ... ×3072]`
 - A **text note about a beach holiday** → becomes similar numbers `[-0.024, -0.007, 0.051 ... ×3072]`
@@ -28,13 +28,13 @@ Think of it like this: imagine if every photo, PDF, song, and sentence you ever 
 
 Because similar-meaning things get similar numbers, you can search by meaning, not by file name or keyword.
 
-Gemini Embedding 2 (model ID: `gemini-embedding-2`) is Google's model that does this conversion. It is the **first model in the world** that handles text, images, audio, video, and PDFs all in the same number space natively — without any workarounds.
+Gemini Embedding 2 (model ID: `gemini-embedding-2`) is Google's model that does this conversion. It is the **first model in the world** that handles text, images, audio, video, and PDFs all in the same number space natively, without any workarounds.
 
 **Official announcement:** https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-embedding-2/
 
 ---
 
-## How It Works — Full Flow Diagram
+## How It Works
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -106,17 +106,17 @@ Gemini Embedding 2 (model ID: `gemini-embedding-2`) is Google's model that does 
 
 Before you start, make sure you have these installed on your laptop:
 
-1. **Python 3.9 or newer** — check with: `python3 --version`
-2. **Node.js 18 or newer** — check with: `node --version`
-3. **A Gemini API key** — get one free at: https://aistudio.google.com/apikey
+1. **Python 3.9 or newer** (check with: `python3 --version`)
+2. **Node.js 18 or newer** (check with: `node --version`)
+3. **A Gemini API key** (get one free at: https://aistudio.google.com/apikey)
 
 ---
 
-## Setup — First Time Only
+## Setup (First Time Only)
 
 Do this once when you first clone the project.
 
-### Step 1 — Clone the project
+### Step 1: Clone the project
 
 Open your terminal and run:
 
@@ -125,7 +125,7 @@ git clone https://github.com/mehrotra0307/memoryvault.git
 cd memoryvault
 ```
 
-### Step 2 — Add your API key
+### Step 2: Add your API key
 
 Create a `.env` file in the root of the project:
 
@@ -142,7 +142,7 @@ cat .env
 # Should show: GEMINI_API_KEY=AIzaSy...
 ```
 
-### Step 3 — Set up the backend (Python)
+### Step 3: Set up the backend (Python)
 
 ```bash
 cd backend
@@ -153,7 +153,7 @@ cd ..
 
 This creates a virtual environment and installs all Python packages.
 
-### Step 4 — Set up the frontend (Node.js)
+### Step 4: Set up the frontend (Node.js)
 
 ```bash
 cd frontend
@@ -169,7 +169,7 @@ This installs all JavaScript packages.
 
 You need **two terminal windows open at the same time**.
 
-### Terminal 1 — Start the backend
+### Terminal 1: Start the backend
 
 ```bash
 cd /path/to/memoryvault/backend
@@ -184,7 +184,7 @@ INFO: Application startup complete.
 
 **Leave this terminal open and running.**
 
-### Terminal 2 — Start the frontend
+### Terminal 2: Start the frontend
 
 ```bash
 cd /path/to/memoryvault/frontend
@@ -237,7 +237,7 @@ You do **NOT** need to reinstall packages. The `venv/` and `node_modules/` folde
 ### Uploading files
 
 1. Go to **http://localhost:3000**
-2. Drag any file into the upload box — or click to browse
+2. Drag any file into the upload box, or click to browse
 3. Supported formats: **JPG, PNG, WebP** (images), **PDF**, **TXT** (text), **MP3, WAV** (audio)
 4. Wait a second while Gemini converts it to numbers
 5. Your file appears in the vault grid
@@ -245,7 +245,7 @@ You do **NOT** need to reinstall packages. The `venv/` and `node_modules/` folde
 ### Searching by text
 
 1. Click **"Search Vault"** (top right)
-2. Type anything — a feeling, a description, a topic
+2. Type anything: a feeling, a description, a topic
 3. Click **Search**
 4. Results appear ranked by similarity percentage
 
@@ -255,29 +255,6 @@ You do **NOT** need to reinstall packages. The `venv/` and `node_modules/` folde
 2. Click **"Search by Image"**
 3. Drop a query image into the box
 4. MemoryVault finds everything in your vault with similar meaning
-
----
-
-## Demo: The Wow Moment
-
-Upload these different types of files with the same theme, then search with one query:
-
-**Beach theme files:**
-- A beach photo (JPG)
-- A text note: *"Loved the white sand beaches of Mauritius, warm Indian Ocean, palm trees"*
-- A PDF travel guide about a tropical island
-
-**Mountain theme files:**
-- A mountain photo
-- A text note: *"Snow-capped peaks, thin air, cold Himalayan trek at 5000 metres"*
-
-**Now search:** `"tropical beach ocean"` → Only beach files appear
-
-**Now search:** `"mountain snow trek"` → Only mountain files appear
-
-**Now search:** `"outdoor nature travel"` → Both beach AND mountain files appear (both are outdoor travel)
-
-The third search is the jaw-dropper — one query finds completely different content types because it understands meaning.
 
 ---
 
@@ -304,7 +281,7 @@ Those are real numbers computed by Gemini Embedding 2. That is the embedding.
 
 ## Cost (If You Want to Deploy Publicly)
 
-The app currently uses the **Gemini API free tier** — zero cost for personal/learning use.
+The app currently uses the **Gemini API free tier**, so there is zero cost for personal or learning use.
 
 If you deploy it publicly:
 
@@ -318,32 +295,17 @@ If you deploy it publicly:
 
 ---
 
-## Free Media for Demo
-
-Non-copyrighted images, audio, and videos you can use freely:
-
-| Type | Website | What to search |
-|---|---|---|
-| Photos | https://pixabay.com | "tropical beach", "mountain snow" |
-| Photos | https://unsplash.com | "beach", "himalaya", "ocean" |
-| Audio | https://pixabay.com/music/ | "ocean waves", "beach ambient" |
-| AI Images | https://gemini.google.com | "Generate a tropical beach photo" |
-
-All Pixabay and Unsplash content is free for any use, no attribution needed.
-
----
-
 ## Project Structure
 
 ```
 memoryvault/
 │
-├── .env.example          ← Template — copy this to .env and add your key
+├── .env.example          ← Template (copy to .env and add your key)
 ├── .gitignore
 ├── start.sh              ← Convenience script to start both servers
 │
 ├── backend/
-│   ├── main.py           ← FastAPI server — all API routes
+│   ├── main.py           ← FastAPI server (all API routes)
 │   ├── embedder.py       ← Calls Gemini Embedding 2 API
 │   ├── vector_store.py   ← Stores and searches embeddings in ChromaDB
 │   ├── inspect_db.py     ← Utility: print what's stored in ChromaDB
@@ -366,11 +328,11 @@ memoryvault/
 
 After understanding and building this project, you will know:
 
-- **What embeddings are** — numbers that represent meaning (the foundation of modern AI search)
-- **What a vector database is** — a database optimized for comparing lists of numbers
-- **What multimodal AI means** — one model that understands text, images, audio together
-- **What RAG is** — Retrieval Augmented Generation: store content as embeddings, retrieve by meaning
-- **How semantic search differs from keyword search** — meaning matches, not word matches
+- **What embeddings are**: numbers that represent meaning, the foundation of modern AI search
+- **What a vector database is**: a database optimized for comparing lists of numbers
+- **What multimodal AI means**: one model that understands text, images, and audio together
+- **What RAG is**: store content as embeddings, retrieve the most relevant ones by meaning
+- **How semantic search differs from keyword search**: meaning matches, not word matches
 
 ---
 
