@@ -102,7 +102,7 @@ async def search_by_text(query: str = Form(...)):
         embedding = embedder.embed_text(query.strip())
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Embedding failed: {str(e)}")
-    results = vector_store.search(embedding, n_results=8)
+    results = vector_store.search(embedding, n_results=5)
     return {"query": query, "results": results}
 
 
@@ -124,7 +124,7 @@ async def search_by_image(file: UploadFile = File(...)):
     finally:
         tmp_path.unlink(missing_ok=True)
 
-    results = vector_store.search(embedding, n_results=8)
+    results = vector_store.search(embedding, n_results=5)
     return {"results": results}
 
 
