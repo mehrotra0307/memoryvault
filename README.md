@@ -4,6 +4,13 @@
 >
 > Built with Google's **Gemini Embedding 2**, the world's first AI model that understands text, images, audio, PDFs, and video in one unified space.
 
+## 🎥 Watch it in action
+
+[![Watch the demo](https://img.youtube.com/vi/j_HkMNIDFDA/maxresdefault.jpg)](https://www.youtube.com/watch?v=j_HkMNIDFDA)
+
+Full project write-up: [ashishmehrotra.com/projects/memory-vault](https://ashishmehrotra.com/projects/memory-vault)
+Related blog post: [ashishmehrotra.com/blog/gemini-embedding-2-what-it-is-and-what-i-built-with-it](https://ashishmehrotra.com/blog/gemini-embedding-2-what-it-is-and-what-i-built-with-it)
+
 ---
 
 ## What is this project?
