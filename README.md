@@ -9,6 +9,7 @@
 [![Watch the demo](https://img.youtube.com/vi/j_HkMNIDFDA/maxresdefault.jpg)](https://www.youtube.com/watch?v=j_HkMNIDFDA)
 
 Full project write-up: [ashishmehrotra.com/projects/memory-vault](https://ashishmehrotra.com/projects/memory-vault)
+
 Related blog post: [ashishmehrotra.com/blog/gemini-embedding-2-what-it-is-and-what-i-built-with-it](https://ashishmehrotra.com/blog/gemini-embedding-2-what-it-is-and-what-i-built-with-it)
 
 ---
